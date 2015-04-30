@@ -25,8 +25,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
-    
-    settingNum = 1;
     _counter.text = @"0000回";
     
     count = 0;
@@ -39,35 +37,66 @@
 
 - (IBAction)pushButton:(id)sender {
     
-    // 乱数のシードを与える
-    srand((unsigned)time(NULL));
-    for (int i = 0; i <= settingNum; i++ ) {
-        // 1から100までの乱数を発生させる */
-        int n = random() % 100;
+    
+ // 乱数のシードを与える
+    
+    int n = rand() % 100 + 1;
+    
+    
+    NSLog(@"%d",n);
+    
+    if(n == 20){
         
-        if(n == 20){
-            
-            [_haibiImage setImage:[UIImage imageNamed:@"pikapika.png"]];
-            
-            _pusuButton.enabled = NO;
-            break;
-        }
+        [self bonus];
+//        break;
     }
+    
     count++;
-    _counter.text = [NSString stringWithFormat:@"%04d回",count];
+    _counter.text = [NSString stringWithFormat:@"%04d回転",count];
     
 
     
 }
+
+
 - (IBAction)pushReset:(id)sender {
     
     _counter.text = @"0000回転";
     
     count = 0;
     
-    [_haibiImage setImage:[UIImage imageNamed:@"nopikapika.png"]];
+    [_haibiImage setImage:[UIImage imageNamed:@"nohibi.png"]];
     
     _pusuButton.enabled = YES;
+}
+
+
+-(void)bonus{
+    
+    // 乱数のシードを与える
+    int n = rand() % 100 + 1;
+    
+    if(n < 10 ){
+        
+        [_haibiImage setImage:[UIImage imageNamed:@"hibi.png"]];
+        
+        _pusuButton.enabled = NO;
+        
+    } else if (n < 30) {
+        
+        [_haibiImage setImage:[UIImage imageNamed:@"happahibi.png"]];
+        
+        _pusuButton.enabled = NO;
+        
+        
+    } else {
+        
+        [_haibiImage setImage:[UIImage imageNamed:@"hanahibi.png"]];
+        
+        _pusuButton.enabled = NO;
+        
+    }
+        
 }
 
 @end

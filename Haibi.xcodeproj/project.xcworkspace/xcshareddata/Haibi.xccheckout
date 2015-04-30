@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>68607178-94E6-4307-B33E-19C167DC1710</string>
+	<key>IDESourceControlProjectName</key>
+	<string>Haibi</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>58E627B109F7F5D0531CDE8CC0949C00D719D219</key>
+		<string>https://github.com/git-osaku/Haibi.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>Haibi.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>58E627B109F7F5D0531CDE8CC0949C00D719D219</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/git-osaku/Haibi.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>58E627B109F7F5D0531CDE8CC0949C00D719D219</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>58E627B109F7F5D0531CDE8CC0949C00D719D219</string>
+			<key>IDESourceControlWCCName</key>
+			<string>Haibi</string>
+		</dict>
+	</array>
+</dict>
+</plist>

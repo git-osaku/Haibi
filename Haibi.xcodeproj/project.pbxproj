@@ -14,10 +14,13 @@
 		0808F9001AD6B7F200177E9E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0808F8FF1AD6B7F200177E9E /* Images.xcassets */; };
 		0808F9031AD6B7F200177E9E /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0808F9011AD6B7F200177E9E /* LaunchScreen.xib */; };
 		0808F90F1AD6B7F200177E9E /* HaibiTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0808F90E1AD6B7F200177E9E /* HaibiTests.m */; };
-		0808F91E1AD6BB6200177E9E /* nopikapika.png in Resources */ = {isa = PBXBuildFile; fileRef = 0808F91C1AD6BB6200177E9E /* nopikapika.png */; };
-		0808F91F1AD6BB6200177E9E /* pikapika.png in Resources */ = {isa = PBXBuildFile; fileRef = 0808F91D1AD6BB6200177E9E /* pikapika.png */; };
 		0808F9211AD6BC1000177E9E /* switch.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0808F9201AD6BC1000177E9E /* switch.jpg */; };
 		6ECCEFE4DCEA372F19AD978D /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 56C63D0B60BB722EB2235849 /* libPods.a */; };
+		963ECBA91AF1F66000F3A567 /* switch2.png in Resources */ = {isa = PBXBuildFile; fileRef = 963ECBA81AF1F66000F3A567 /* switch2.png */; };
+		963ECBAB1AF1FAE000F3A567 /* hibi.png in Resources */ = {isa = PBXBuildFile; fileRef = 963ECBAA1AF1FAE000F3A567 /* hibi.png */; };
+		963ECBAF1AF1FE0000F3A567 /* hanahibi.png in Resources */ = {isa = PBXBuildFile; fileRef = 963ECBAE1AF1FE0000F3A567 /* hanahibi.png */; };
+		963ECBB31AF1FE1800F3A567 /* nohibi.png in Resources */ = {isa = PBXBuildFile; fileRef = 963ECBB21AF1FE1800F3A567 /* nohibi.png */; };
+		963ECBB51AF1FE2B00F3A567 /* happahibi.png in Resources */ = {isa = PBXBuildFile; fileRef = 963ECBB41AF1FE2B00F3A567 /* happahibi.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,12 +47,15 @@
 		0808F9081AD6B7F200177E9E /* HaibiTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HaibiTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0808F90D1AD6B7F200177E9E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0808F90E1AD6B7F200177E9E /* HaibiTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HaibiTests.m; sourceTree = "<group>"; };
-		0808F91C1AD6BB6200177E9E /* nopikapika.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = nopikapika.png; sourceTree = "<group>"; };
-		0808F91D1AD6BB6200177E9E /* pikapika.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pikapika.png; sourceTree = "<group>"; };
 		0808F9201AD6BC1000177E9E /* switch.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = switch.jpg; sourceTree = "<group>"; };
 		0972EA64A88474357970395B /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		56C63D0B60BB722EB2235849 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		8DF06216BCA3A3D8510CB5D1 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		963ECBA81AF1F66000F3A567 /* switch2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = switch2.png; sourceTree = "<group>"; };
+		963ECBAA1AF1FAE000F3A567 /* hibi.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hibi.png; sourceTree = "<group>"; };
+		963ECBAE1AF1FE0000F3A567 /* hanahibi.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hanahibi.png; sourceTree = "<group>"; };
+		963ECBB21AF1FE1800F3A567 /* nohibi.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = nohibi.png; sourceTree = "<group>"; };
+		963ECBB41AF1FE2B00F3A567 /* happahibi.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = happahibi.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,8 +115,11 @@
 		0808F8F21AD6B7F200177E9E /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				0808F91C1AD6BB6200177E9E /* nopikapika.png */,
-				0808F91D1AD6BB6200177E9E /* pikapika.png */,
+				963ECBAA1AF1FAE000F3A567 /* hibi.png */,
+				963ECBB21AF1FE1800F3A567 /* nohibi.png */,
+				963ECBAE1AF1FE0000F3A567 /* hanahibi.png */,
+				963ECBB41AF1FE2B00F3A567 /* happahibi.png */,
+				963ECBA81AF1F66000F3A567 /* switch2.png */,
 				0808F9201AD6BC1000177E9E /* switch.jpg */,
 				0808F8F31AD6B7F200177E9E /* Info.plist */,
 				0808F8F41AD6B7F200177E9E /* main.m */,
@@ -234,12 +243,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0808F91E1AD6BB6200177E9E /* nopikapika.png in Resources */,
 				0808F8FE1AD6B7F200177E9E /* Main.storyboard in Resources */,
+				963ECBAF1AF1FE0000F3A567 /* hanahibi.png in Resources */,
+				963ECBAB1AF1FAE000F3A567 /* hibi.png in Resources */,
 				0808F9031AD6B7F200177E9E /* LaunchScreen.xib in Resources */,
 				0808F9001AD6B7F200177E9E /* Images.xcassets in Resources */,
+				963ECBA91AF1F66000F3A567 /* switch2.png in Resources */,
 				0808F9211AD6BC1000177E9E /* switch.jpg in Resources */,
-				0808F91F1AD6BB6200177E9E /* pikapika.png in Resources */,
+				963ECBB31AF1FE1800F3A567 /* nohibi.png in Resources */,
+				963ECBB51AF1FE2B00F3A567 /* happahibi.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
