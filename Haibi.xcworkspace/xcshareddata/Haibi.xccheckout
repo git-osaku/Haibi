@@ -12,6 +12,8 @@
 	<dict>
 		<key>58E627B109F7F5D0531CDE8CC0949C00D719D219</key>
 		<string>https://github.com/git-osaku/Haibi.git</string>
+		<key>8F1EE616791C8648C13FE96064BC8E4753F499B7</key>
+		<string>https://github.com/jivadevoe/NSTimer-Blocks.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>Haibi.xcworkspace</string>
@@ -19,6 +21,8 @@
 	<dict>
 		<key>58E627B109F7F5D0531CDE8CC0949C00D719D219</key>
 		<string>..</string>
+		<key>8F1EE616791C8648C13FE96064BC8E4753F499B7</key>
+		<string>../Haibi/NSTimer-Blocks/</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
 	<string>https://github.com/git-osaku/Haibi.git</string>
@@ -35,6 +39,14 @@
 			<string>58E627B109F7F5D0531CDE8CC0949C00D719D219</string>
 			<key>IDESourceControlWCCName</key>
 			<string>Haibi</string>
+		</dict>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>8F1EE616791C8648C13FE96064BC8E4753F499B7</string>
+			<key>IDESourceControlWCCName</key>
+			<string>NSTimer-Blocks</string>
 		</dict>
 	</array>
 </dict>

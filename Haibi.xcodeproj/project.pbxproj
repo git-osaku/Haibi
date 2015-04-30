@@ -21,6 +21,9 @@
 		963ECBAF1AF1FE0000F3A567 /* hanahibi.png in Resources */ = {isa = PBXBuildFile; fileRef = 963ECBAE1AF1FE0000F3A567 /* hanahibi.png */; };
 		963ECBB31AF1FE1800F3A567 /* nohibi.png in Resources */ = {isa = PBXBuildFile; fileRef = 963ECBB21AF1FE1800F3A567 /* nohibi.png */; };
 		963ECBB51AF1FE2B00F3A567 /* happahibi.png in Resources */ = {isa = PBXBuildFile; fileRef = 963ECBB41AF1FE2B00F3A567 /* happahibi.png */; };
+		963ECBBA1AF20D3000F3A567 /* NSTimer+Blocks.m in Sources */ = {isa = PBXBuildFile; fileRef = 963ECBB81AF20D3000F3A567 /* NSTimer+Blocks.m */; };
+		963ECBBB1AF20D3000F3A567 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 963ECBB91AF20D3000F3A567 /* README.md */; };
+		963ECBBD1AF21A0C00F3A567 /* kanban.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 963ECBBC1AF21A0C00F3A567 /* kanban.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,7 +37,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0808F8EF1AD6B7F200177E9E /* Haibi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Haibi.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		0808F8EF1AD6B7F200177E9E /* haibi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = haibi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0808F8F31AD6B7F200177E9E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0808F8F41AD6B7F200177E9E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		0808F8F61AD6B7F200177E9E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -56,6 +59,10 @@
 		963ECBAE1AF1FE0000F3A567 /* hanahibi.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hanahibi.png; sourceTree = "<group>"; };
 		963ECBB21AF1FE1800F3A567 /* nohibi.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = nohibi.png; sourceTree = "<group>"; };
 		963ECBB41AF1FE2B00F3A567 /* happahibi.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = happahibi.png; sourceTree = "<group>"; };
+		963ECBB71AF20D3000F3A567 /* NSTimer+Blocks.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSTimer+Blocks.h"; sourceTree = "<group>"; };
+		963ECBB81AF20D3000F3A567 /* NSTimer+Blocks.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSTimer+Blocks.m"; sourceTree = "<group>"; };
+		963ECBB91AF20D3000F3A567 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		963ECBBC1AF21A0C00F3A567 /* kanban.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = kanban.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +87,7 @@
 		0808F8E61AD6B7F200177E9E = {
 			isa = PBXGroup;
 			children = (
+				963ECBB61AF20D3000F3A567 /* NSTimer-Blocks */,
 				0808F8F11AD6B7F200177E9E /* Haibi */,
 				0808F90B1AD6B7F200177E9E /* HaibiTests */,
 				0808F8F01AD6B7F200177E9E /* Products */,
@@ -91,7 +99,7 @@
 		0808F8F01AD6B7F200177E9E /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				0808F8EF1AD6B7F200177E9E /* Haibi.app */,
+				0808F8EF1AD6B7F200177E9E /* haibi.app */,
 				0808F9081AD6B7F200177E9E /* HaibiTests.xctest */,
 			);
 			name = Products;
@@ -119,6 +127,7 @@
 				963ECBB21AF1FE1800F3A567 /* nohibi.png */,
 				963ECBAE1AF1FE0000F3A567 /* hanahibi.png */,
 				963ECBB41AF1FE2B00F3A567 /* happahibi.png */,
+				963ECBBC1AF21A0C00F3A567 /* kanban.jpg */,
 				963ECBA81AF1F66000F3A567 /* switch2.png */,
 				0808F9201AD6BC1000177E9E /* switch.jpg */,
 				0808F8F31AD6B7F200177E9E /* Info.plist */,
@@ -144,6 +153,17 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		963ECBB61AF20D3000F3A567 /* NSTimer-Blocks */ = {
+			isa = PBXGroup;
+			children = (
+				963ECBB71AF20D3000F3A567 /* NSTimer+Blocks.h */,
+				963ECBB81AF20D3000F3A567 /* NSTimer+Blocks.m */,
+				963ECBB91AF20D3000F3A567 /* README.md */,
+			);
+			name = "NSTimer-Blocks";
+			path = "Haibi/NSTimer-Blocks";
+			sourceTree = "<group>";
+		};
 		BA32EB6E2AEDD2A1443634E8 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -164,9 +184,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		0808F8EE1AD6B7F200177E9E /* Haibi */ = {
+		0808F8EE1AD6B7F200177E9E /* haibi */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 0808F9121AD6B7F200177E9E /* Build configuration list for PBXNativeTarget "Haibi" */;
+			buildConfigurationList = 0808F9121AD6B7F200177E9E /* Build configuration list for PBXNativeTarget "haibi" */;
 			buildPhases = (
 				2F83670306FE33B0A46AF36A /* Check Pods Manifest.lock */,
 				0808F8EB1AD6B7F200177E9E /* Sources */,
@@ -178,9 +198,9 @@
 			);
 			dependencies = (
 			);
-			name = Haibi;
+			name = haibi;
 			productName = Haibi;
-			productReference = 0808F8EF1AD6B7F200177E9E /* Haibi.app */;
+			productReference = 0808F8EF1AD6B7F200177E9E /* haibi.app */;
 			productType = "com.apple.product-type.application";
 		};
 		0808F9071AD6B7F200177E9E /* HaibiTests */ = {
@@ -232,7 +252,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				0808F8EE1AD6B7F200177E9E /* Haibi */,
+				0808F8EE1AD6B7F200177E9E /* haibi */,
 				0808F9071AD6B7F200177E9E /* HaibiTests */,
 			);
 		};
@@ -251,6 +271,7 @@
 				963ECBA91AF1F66000F3A567 /* switch2.png in Resources */,
 				0808F9211AD6BC1000177E9E /* switch.jpg in Resources */,
 				963ECBB31AF1FE1800F3A567 /* nohibi.png in Resources */,
+				963ECBBD1AF21A0C00F3A567 /* kanban.jpg in Resources */,
 				963ECBB51AF1FE2B00F3A567 /* happahibi.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -304,6 +325,8 @@
 			files = (
 				0808F8FB1AD6B7F200177E9E /* ViewController.m in Sources */,
 				0808F8F81AD6B7F200177E9E /* AppDelegate.m in Sources */,
+				963ECBBB1AF20D3000F3A567 /* README.md in Sources */,
+				963ECBBA1AF20D3000F3A567 /* NSTimer+Blocks.m in Sources */,
 				0808F8F51AD6B7F200177E9E /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -321,7 +344,7 @@
 /* Begin PBXTargetDependency section */
 		0808F90A1AD6B7F200177E9E /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 0808F8EE1AD6B7F200177E9E /* Haibi */;
+			target = 0808F8EE1AD6B7F200177E9E /* haibi */;
 			targetProxy = 0808F9091AD6B7F200177E9E /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -430,6 +453,7 @@
 				INFOPLIST_FILE = Haibi/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "3516f2c5-a7cf-4de7-bc24-0fd305fbb4e7";
 			};
 			name = Debug;
 		};
@@ -441,6 +465,7 @@
 				INFOPLIST_FILE = Haibi/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "3516f2c5-a7cf-4de7-bc24-0fd305fbb4e7";
 			};
 			name = Release;
 		};
@@ -490,7 +515,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		0808F9121AD6B7F200177E9E /* Build configuration list for PBXNativeTarget "Haibi" */ = {
+		0808F9121AD6B7F200177E9E /* Build configuration list for PBXNativeTarget "haibi" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				0808F9131AD6B7F200177E9E /* Debug */,

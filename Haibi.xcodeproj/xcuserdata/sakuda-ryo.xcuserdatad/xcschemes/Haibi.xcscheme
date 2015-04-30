@@ -15,8 +15,8 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "0808F8EE1AD6B7F200177E9E"
-               BuildableName = "Haibi.app"
-               BlueprintName = "Haibi"
+               BuildableName = "haibi.app"
+               BlueprintName = "haibi"
                ReferencedContainer = "container:Haibi.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -57,8 +57,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "0808F8EE1AD6B7F200177E9E"
-            BuildableName = "Haibi.app"
-            BlueprintName = "Haibi"
+            BuildableName = "haibi.app"
+            BlueprintName = "haibi"
             ReferencedContainer = "container:Haibi.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -76,8 +76,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "0808F8EE1AD6B7F200177E9E"
-            BuildableName = "Haibi.app"
-            BlueprintName = "Haibi"
+            BuildableName = "haibi.app"
+            BlueprintName = "haibi"
             ReferencedContainer = "container:Haibi.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
@@ -94,8 +94,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "0808F8EE1AD6B7F200177E9E"
-            BuildableName = "Haibi.app"
-            BlueprintName = "Haibi"
+            BuildableName = "haibi.app"
+            BlueprintName = "haibi"
             ReferencedContainer = "container:Haibi.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
