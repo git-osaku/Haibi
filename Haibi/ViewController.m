@@ -9,11 +9,16 @@
 #import "ViewController.h"
 #import "NSTimer+Blocks.h"
 
+#import <AVFoundation/AVFoundation.h>
+
+
 @interface ViewController ()
 @property (weak, nonatomic) IBOutlet UIImageView *haibiImage;
 @property (weak, nonatomic) IBOutlet UIButton *pusuButton;
 @property (weak, nonatomic) IBOutlet UILabel *counter;
 @property (weak, nonatomic) IBOutlet UILabel *awardLabel;
+
+@property (weak, nonatomic) IBOutlet UIButton *soundButton;
 
 @end
 
@@ -22,7 +27,9 @@
     int settingNum;
     int count;
     BOOL on;
+    BOOL onSound;
     NSTimer *timer;
+    AVAudioPlayer *sound;
     
 }
 
@@ -37,6 +44,8 @@
     
     
     _counter.text = @"0000回";
+    
+    onSound = YES;
     
     count = 0;
 }
@@ -95,6 +104,17 @@
     // 乱数のシードを与える
     int n = arc4random() % 100 + 1;
     
+    if(onSound){
+
+        NSString *sePath = [[NSBundle mainBundle] pathForResource:@"bonus" ofType:@"mp3"];
+
+        NSURL *seUrl = [NSURL fileURLWithPath:sePath];
+
+        sound = [[AVAudioPlayer alloc] initWithContentsOfURL:seUrl error:nil];
+        [sound setNumberOfLoops:0];
+        [sound play];
+
+    }
     
     if(n < 70 ){
         
@@ -177,7 +197,6 @@
                 
             } else {
                 
-                
                 [_haibiImage setImage:[UIImage imageNamed:@"nohibi.png"]];
                 
             }
@@ -194,6 +213,26 @@
     _pusuButton.enabled = NO;
     
 }
+
+- (IBAction)soundSwitch:(id)sender {
+    
+
+    if(onSound){
+        
+        [_soundButton setTitleColor:[UIColor grayColor] forState:UIControlStateNormal];
+        [_soundButton setTitle:@"Sound OFF" forState:UIControlStateNormal];
+        
+        
+    } else {
+        
+        [_soundButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+        [_soundButton setTitle:@"Sound ON" forState:UIControlStateNormal];
+    }
+    
+    onSound = !onSound;
+    
+}
+
 
 
 
