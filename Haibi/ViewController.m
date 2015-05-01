@@ -77,9 +77,6 @@
     [[NSUserDefaults standardUserDefaults] setInteger:i forKey:@"TotalCount"];
     
     _counter.text = [NSString stringWithFormat:@"%04d回転",count];
-    
-
-    
 }
 
 
@@ -104,19 +101,11 @@
     // 乱数のシードを与える
     int n = arc4random() % 100 + 1;
     
-    if(onSound){
-
-        NSString *sePath = [[NSBundle mainBundle] pathForResource:@"bonus" ofType:@"mp3"];
-
-        NSURL *seUrl = [NSURL fileURLWithPath:sePath];
-
-        sound = [[AVAudioPlayer alloc] initWithContentsOfURL:seUrl error:nil];
-        [sound setNumberOfLoops:0];
-        [sound play];
-
-    }
     
-    if(n < 70 ){
+    //通常点滅
+    if(n <= 70 ){
+        
+        [self sound:@"bonus"];
         
         timer = [NSTimer scheduledTimerWithTimeInterval:0.2 block:^{
             
@@ -135,9 +124,11 @@
             
         } repeats:YES];
         _awardLabel.text = @"☆　通常点滅";
+    
+    //高速点滅
+    } else if (n <= 75) {
         
-    } else if (n < 80) {
-        
+        [self sound:@"bonus"];
       
         timer = [NSTimer scheduledTimerWithTimeInterval:0.05 block:^{
             
@@ -158,7 +149,34 @@
         
         _awardLabel.text = @"☆☆　高速点滅";
         
-    } else if (n < 90) {
+    //スロー点滅
+    } else if (n <= 80) {
+        
+        [self sound:@"bonus"];
+        
+        timer = [NSTimer scheduledTimerWithTimeInterval:0.05 block:^{
+            
+            if(on){
+                
+                [_haibiImage setImage:[UIImage imageNamed:@"hibi.png"]];
+                
+            } else {
+                
+                
+                [_haibiImage setImage:[UIImage imageNamed:@"nohibi.png"]];
+                
+            }
+            
+            on = !on;
+            
+        } repeats:YES];
+        
+        _awardLabel.text = @"☆☆　スロー点滅";
+    
+    //花のみ点滅
+    } else if (n <= 85) {
+        
+        [self sound:@"bonus"];
         
         timer = [NSTimer scheduledTimerWithTimeInterval:0.2 block:^{
             
@@ -179,15 +197,10 @@
         
         _awardLabel.text = @"☆☆　花のみ点滅";
         
+    //葉っぱのみ
+    } else if (n <= 90) {
         
-    } else if (n < 95) {
-        
-        [_haibiImage setImage:[UIImage imageNamed:@"hibi.png"]];
-        
-        _awardLabel.text = @"☆☆☆　点灯";
-        
-        
-    } else {
+        [self sound:@"bonus"];
         
         timer = [NSTimer scheduledTimerWithTimeInterval:0.2 block:^{
             
@@ -207,8 +220,110 @@
         
         _awardLabel.text = @"☆☆☆　葉っぱのみ点滅";
         
+    //点灯
+    } else if (n <= 92) {
+        
+        [self sound:@"bonus"];
+        
+        [_haibiImage setImage:[UIImage imageNamed:@"hibi.png"]];
+        
+        _awardLabel.text = @"☆☆☆　点灯";
+        
+    //瞬き
+    } else if (n <= 94) {
+        
+        [self sound:@"bonus"];
+        
+        timer = [NSTimer scheduledTimerWithTimeInterval:0.1 block:^{
+            
+            if(on){
+                
+                [_haibiImage setImage:[UIImage imageNamed:@"hibi.png"]];
+                
+            } else {
+                
+                [_haibiImage setImage:[UIImage imageNamed:@"nohibi.png"]];
+                [timer invalidate];
+                
+            }
+            
+            on = !on;
+            
+        } repeats:YES];
+        
+        _awardLabel.text = @"☆☆☆　瞬き";
+        
+    //雷
+    } else if (n <= 96) {
+        
+        [self sound:@"thunder"];
+        
+        timer = [NSTimer scheduledTimerWithTimeInterval:0.2 block:^{
+            
+            if(on){
+                
+                [_haibiImage setImage:[UIImage imageNamed:@"hibi.png"]];
+                
+            } else {
+                
+                [_haibiImage setImage:[UIImage imageNamed:@"nohibi.png"]];
+                
+            }
+            
+            on = !on;
+            
+        } repeats:YES];
+        
+        _awardLabel.text = @"☆☆☆　雷";
+        
+    //爆発
+    } else if (n <= 98) {
+        
+        [self sound:@"explosion"];
+        
+        timer = [NSTimer scheduledTimerWithTimeInterval:0.2 block:^{
+            
+            if(on){
+                
+                [_haibiImage setImage:[UIImage imageNamed:@"hibi.png"]];
+                
+            } else {
+                
+                [_haibiImage setImage:[UIImage imageNamed:@"nohibi.png"]];
+                
+            }
+            
+            on = !on;
+            
+        } repeats:YES];
+        
+        _awardLabel.text = @"☆☆☆　爆発";
+    
+        
+    //津波
+    } else {
+        
+        [self sound:@"wave"];
+        
+        timer = [NSTimer scheduledTimerWithTimeInterval:0.2 block:^{
+            
+            if(on){
+                
+                [_haibiImage setImage:[UIImage imageNamed:@"hibi.png"]];
+                
+            } else {
+                
+                [_haibiImage setImage:[UIImage imageNamed:@"nohibi.png"]];
+                
+            }
+            
+            on = !on;
+            
+        } repeats:YES];
+        
+        _awardLabel.text = @"☆☆☆　津波";
+        
     }
-
     
     _pusuButton.enabled = NO;
     
@@ -233,6 +348,19 @@
     
 }
 
+-(void)sound:(NSString*)name{
+    
+    if(onSound){
+        
+        NSString *sePath = [[NSBundle mainBundle] pathForResource:name ofType:@"mp3"];
+        
+        NSURL *seUrl = [NSURL fileURLWithPath:sePath];
+        
+        sound = [[AVAudioPlayer alloc] initWithContentsOfURL:seUrl error:nil];
+        [sound setNumberOfLoops:0];
+        [sound play];
+    }
+}
 
 
 

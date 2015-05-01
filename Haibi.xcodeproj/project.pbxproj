@@ -22,6 +22,9 @@
 		963ECBBA1AF20D3000F3A567 /* NSTimer+Blocks.m in Sources */ = {isa = PBXBuildFile; fileRef = 963ECBB81AF20D3000F3A567 /* NSTimer+Blocks.m */; };
 		963ECBBB1AF20D3000F3A567 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 963ECBB91AF20D3000F3A567 /* README.md */; };
 		963ECBBD1AF21A0C00F3A567 /* kanban.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 963ECBBC1AF21A0C00F3A567 /* kanban.jpg */; };
+		9663025C1AF37E9700E9F176 /* explosion.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 966302591AF37E9700E9F176 /* explosion.mp3 */; };
+		9663025D1AF37E9700E9F176 /* thunder.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9663025A1AF37E9700E9F176 /* thunder.mp3 */; };
+		9663025E1AF37E9700E9F176 /* wave.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9663025B1AF37E9700E9F176 /* wave.mp3 */; };
 		96DC06CF1AF34D4900707750 /* audio49.png in Resources */ = {isa = PBXBuildFile; fileRef = 96DC06CE1AF34D4900707750 /* audio49.png */; };
 		96DC06D11AF3501600707750 /* bonus.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 96DC06D01AF3501600707750 /* bonus.mp3 */; };
 		96DC06D31AF3522C00707750 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96DC06D21AF3522C00707750 /* AVFoundation.framework */; };
@@ -60,6 +63,9 @@
 		963ECBB81AF20D3000F3A567 /* NSTimer+Blocks.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSTimer+Blocks.m"; sourceTree = "<group>"; };
 		963ECBB91AF20D3000F3A567 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		963ECBBC1AF21A0C00F3A567 /* kanban.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = kanban.jpg; sourceTree = "<group>"; };
+		966302591AF37E9700E9F176 /* explosion.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = explosion.mp3; path = ../../../Desktop/explosion.mp3; sourceTree = "<group>"; };
+		9663025A1AF37E9700E9F176 /* thunder.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = thunder.mp3; path = ../../../Desktop/thunder.mp3; sourceTree = "<group>"; };
+		9663025B1AF37E9700E9F176 /* wave.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = wave.mp3; path = ../../../Desktop/wave.mp3; sourceTree = "<group>"; };
 		96DC06CE1AF34D4900707750 /* audio49.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = audio49.png; sourceTree = "<group>"; };
 		96DC06D01AF3501600707750 /* bonus.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = bonus.mp3; sourceTree = "<group>"; };
 		96DC06D21AF3522C00707750 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
@@ -122,6 +128,9 @@
 			isa = PBXGroup;
 			children = (
 				96DC06D01AF3501600707750 /* bonus.mp3 */,
+				966302591AF37E9700E9F176 /* explosion.mp3 */,
+				9663025A1AF37E9700E9F176 /* thunder.mp3 */,
+				9663025B1AF37E9700E9F176 /* wave.mp3 */,
 				963ECBAA1AF1FAE000F3A567 /* hibi.png */,
 				963ECBB21AF1FE1800F3A567 /* nohibi.png */,
 				963ECBAE1AF1FE0000F3A567 /* hanahibi.png */,
@@ -252,17 +261,20 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9663025C1AF37E9700E9F176 /* explosion.mp3 in Resources */,
 				0808F8FE1AD6B7F200177E9E /* Main.storyboard in Resources */,
 				963ECBAF1AF1FE0000F3A567 /* hanahibi.png in Resources */,
 				963ECBAB1AF1FAE000F3A567 /* hibi.png in Resources */,
 				96DC06CF1AF34D4900707750 /* audio49.png in Resources */,
 				0808F9001AD6B7F200177E9E /* Images.xcassets in Resources */,
+				9663025D1AF37E9700E9F176 /* thunder.mp3 in Resources */,
 				963ECBA91AF1F66000F3A567 /* switch2.png in Resources */,
 				96DC06D11AF3501600707750 /* bonus.mp3 in Resources */,
 				0808F9211AD6BC1000177E9E /* switch.jpg in Resources */,
 				963ECBB31AF1FE1800F3A567 /* nohibi.png in Resources */,
 				963ECBBD1AF21A0C00F3A567 /* kanban.jpg in Resources */,
 				963ECBB51AF1FE2B00F3A567 /* happahibi.png in Resources */,
+				9663025E1AF37E9700E9F176 /* wave.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
