@@ -10,4 +10,13 @@
 
 @interface ResultView : UIView
 
+@property (weak, nonatomic) IBOutlet UILabel *totalTap;
+
+@property (weak, nonatomic) IBOutlet UILabel *totalHaibi;
+
+@property (weak, nonatomic) IBOutlet UILabel *haibiAverage;
+
+@property (weak, nonatomic) IBOutlet UILabel *complete;
+
+
 @end

@@ -9,6 +9,8 @@
 #import "ViewController.h"
 #import "NSTimer+Blocks.h"
 
+#import "ResultView.h"
+
 #import <AVFoundation/AVFoundation.h>
 
 

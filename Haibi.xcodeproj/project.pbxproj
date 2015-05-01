@@ -25,6 +25,8 @@
 		9663025C1AF37E9700E9F176 /* explosion.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 966302591AF37E9700E9F176 /* explosion.mp3 */; };
 		9663025D1AF37E9700E9F176 /* thunder.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9663025A1AF37E9700E9F176 /* thunder.mp3 */; };
 		9663025E1AF37E9700E9F176 /* wave.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9663025B1AF37E9700E9F176 /* wave.mp3 */; };
+		966302601AF382C300E9F176 /* ResultView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9663025F1AF382C300E9F176 /* ResultView.xib */; };
+		966302631AF3853500E9F176 /* ResultView.m in Sources */ = {isa = PBXBuildFile; fileRef = 966302621AF3853500E9F176 /* ResultView.m */; };
 		96DC06CF1AF34D4900707750 /* audio49.png in Resources */ = {isa = PBXBuildFile; fileRef = 96DC06CE1AF34D4900707750 /* audio49.png */; };
 		96DC06D11AF3501600707750 /* bonus.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 96DC06D01AF3501600707750 /* bonus.mp3 */; };
 		96DC06D31AF3522C00707750 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96DC06D21AF3522C00707750 /* AVFoundation.framework */; };
@@ -66,6 +68,9 @@
 		966302591AF37E9700E9F176 /* explosion.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = explosion.mp3; path = ../../../Desktop/explosion.mp3; sourceTree = "<group>"; };
 		9663025A1AF37E9700E9F176 /* thunder.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = thunder.mp3; path = ../../../Desktop/thunder.mp3; sourceTree = "<group>"; };
 		9663025B1AF37E9700E9F176 /* wave.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = wave.mp3; path = ../../../Desktop/wave.mp3; sourceTree = "<group>"; };
+		9663025F1AF382C300E9F176 /* ResultView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ResultView.xib; sourceTree = "<group>"; };
+		966302611AF3853500E9F176 /* ResultView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResultView.h; sourceTree = "<group>"; };
+		966302621AF3853500E9F176 /* ResultView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResultView.m; sourceTree = "<group>"; };
 		96DC06CE1AF34D4900707750 /* audio49.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = audio49.png; sourceTree = "<group>"; };
 		96DC06D01AF3501600707750 /* bonus.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = bonus.mp3; sourceTree = "<group>"; };
 		96DC06D21AF3522C00707750 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
@@ -120,6 +125,9 @@
 				0808F8FC1AD6B7F200177E9E /* Main.storyboard */,
 				0808F8FF1AD6B7F200177E9E /* Images.xcassets */,
 				0808F8F21AD6B7F200177E9E /* Supporting Files */,
+				9663025F1AF382C300E9F176 /* ResultView.xib */,
+				966302611AF3853500E9F176 /* ResultView.h */,
+				966302621AF3853500E9F176 /* ResultView.m */,
 			);
 			path = Haibi;
 			sourceTree = "<group>";
@@ -261,6 +269,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				966302601AF382C300E9F176 /* ResultView.xib in Resources */,
 				9663025C1AF37E9700E9F176 /* explosion.mp3 in Resources */,
 				0808F8FE1AD6B7F200177E9E /* Main.storyboard in Resources */,
 				963ECBAF1AF1FE0000F3A567 /* hanahibi.png in Resources */,
@@ -295,6 +304,7 @@
 				0808F8FB1AD6B7F200177E9E /* ViewController.m in Sources */,
 				0808F8F81AD6B7F200177E9E /* AppDelegate.m in Sources */,
 				963ECBBB1AF20D3000F3A567 /* README.md in Sources */,
+				966302631AF3853500E9F176 /* ResultView.m in Sources */,
 				963ECBBA1AF20D3000F3A567 /* NSTimer+Blocks.m in Sources */,
 				0808F8F51AD6B7F200177E9E /* main.m in Sources */,
 			);
