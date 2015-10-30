@@ -6,7 +6,7 @@
 //  Copyright (c) 2015年 myname. All rights reserved.
 //
 
-// fixTest
+// fixTest2
 
 #import <Foundation/Foundation.h>
 
