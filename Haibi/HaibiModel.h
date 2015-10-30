@@ -6,6 +6,8 @@
 //  Copyright (c) 2015年 myname. All rights reserved.
 //
 
+// fixTest
+
 #import <Foundation/Foundation.h>
 
 @interface HaibiModel : NSObject
