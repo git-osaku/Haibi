@@ -14,8 +14,6 @@
 
 @property (weak, nonatomic) IBOutlet UILabel *totalHaibi;
 
-@property (weak, nonatomic) IBOutlet UILabel *haibiAverage;
-
 @property (weak, nonatomic) IBOutlet UILabel *complete;
 
 

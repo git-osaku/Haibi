@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -57,8 +58,14 @@
                                 <rect key="frame" x="41" y="237" width="292" height="214"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="214" id="YpF-BN-In9"/>
+                                    <constraint firstAttribute="width" secondItem="jCG-Ul-YPQ" secondAttribute="height" multiplier="146:107" id="Zyg-XQ-9xv"/>
                                     <constraint firstAttribute="width" constant="292" id="hlH-SZ-H2h"/>
                                 </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="hlH-SZ-H2h"/>
+                                    </mask>
+                                </variation>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="kanban.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="CUR-dw-2qc">
                                 <rect key="frame" x="98" y="39" width="178" height="94"/>
@@ -110,10 +117,14 @@
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="pushResult:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="wfu-0h-EHI"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="jCG-Ul-YPQ" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="41" id="0IV-GX-VQV"/>
                             <constraint firstAttribute="centerX" secondItem="jCG-Ul-YPQ" secondAttribute="centerX" constant="0.5" id="6pc-ih-6aU"/>
                             <constraint firstAttribute="centerX" secondItem="n5e-oc-tU0" secondAttribute="centerX" id="7N9-kv-L4p"/>
                             <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="w9u-mp-uxu" secondAttribute="bottom" constant="8" id="DnL-ET-SYd"/>
@@ -121,6 +132,7 @@
                             <constraint firstAttribute="trailing" secondItem="tfj-1E-ECC" secondAttribute="trailing" constant="16" id="Hi1-ar-jqL"/>
                             <constraint firstItem="tfj-1E-ECC" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="8" id="KYT-yj-qkQ"/>
                             <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="oSp-H8-Uwd" secondAttribute="bottom" constant="14" id="LH6-iZ-vnS"/>
+                            <constraint firstAttribute="trailing" secondItem="jCG-Ul-YPQ" secondAttribute="trailing" constant="42" id="Mhv-5P-au5"/>
                             <constraint firstAttribute="centerX" secondItem="CUR-dw-2qc" secondAttribute="centerX" id="Oxd-bQ-H2F"/>
                             <constraint firstItem="jCG-Ul-YPQ" firstAttribute="top" secondItem="P4H-LL-yzX" secondAttribute="bottom" constant="13" id="PEm-oY-h4f"/>
                             <constraint firstAttribute="centerX" secondItem="VgB-CK-1ky" secondAttribute="centerX" id="QpU-zZ-P71"/>

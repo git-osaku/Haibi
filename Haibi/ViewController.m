@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "NSTimer+Blocks.h"
+#import "HaibiModel.h"
 
 #import "ResultView.h"
 
@@ -15,6 +16,7 @@
 
 
 @interface ViewController ()
+
 @property (weak, nonatomic) IBOutlet UIImageView *haibiImage;
 @property (weak, nonatomic) IBOutlet UIButton *pusuButton;
 @property (weak, nonatomic) IBOutlet UILabel *counter;
@@ -28,10 +30,11 @@
     
     int settingNum;
     int count;
-    BOOL on;
+    BOOL flash;
     BOOL onSound;
     NSTimer *timer;
     AVAudioPlayer *sound;
+    ResultView *resultView;
     
 }
 
@@ -41,9 +44,30 @@
     
     NSMutableDictionary *defaults = [NSMutableDictionary dictionary];
     [defaults setObject:@"0" forKey:@"TotalCount"];
-    [defaults setObject:@"0" forKey:@"Avarage"];
+    [defaults setObject:@"0" forKey:@"TotalHaibi"];
+    [defaults setObject:@"0" forKey:@"Complete"];
+    
+    //光り方
+    [defaults setObject:[NSNumber numberWithBool:NO] forKey:@"nomalFlash"];
+    [defaults setObject:[NSNumber numberWithBool:NO] forKey:@"speedFlash"];
+    [defaults setObject:[NSNumber numberWithBool:NO] forKey:@"slowFlash"];
+    [defaults setObject:[NSNumber numberWithBool:NO] forKey:@"flowerFlash"];
+    [defaults setObject:[NSNumber numberWithBool:NO] forKey:@"leafFlash"];
+    [defaults setObject:[NSNumber numberWithBool:NO] forKey:@"lightingFlash"];
+    [defaults setObject:[NSNumber numberWithBool:NO] forKey:@"winkFlash"];
+    [defaults setObject:[NSNumber numberWithBool:NO] forKey:@"thumderFlash"];
+    [defaults setObject:[NSNumber numberWithBool:NO] forKey:@"bombFlash"];
+    [defaults setObject:[NSNumber numberWithBool:NO] forKey:@"waveFlash"];
+    
     [[NSUserDefaults standardUserDefaults] registerDefaults:defaults];
     
+    resultView = [[NSBundle mainBundle] loadNibNamed:@"ResultView" owner:self options:nil][0];
+    
+    [self.view addSubview:resultView];
+    
+    resultView.center = self.view.center;
+    
+    resultView.hidden = YES;
     
     _counter.text = @"0000回";
     
@@ -92,6 +116,8 @@
     [_haibiImage setImage:[UIImage imageNamed:@"nohibi.png"]];
     
     
+    
+    
     _awardLabel.text = @"";
     
     _pusuButton.enabled = YES;
@@ -103,15 +129,25 @@
     // 乱数のシードを与える
     int n = arc4random() % 100 + 1;
     
+    int i = [[NSUserDefaults standardUserDefaults] integerForKey:@"TotalHaibi"] + 1;
+    [[NSUserDefaults standardUserDefaults] setInteger:i forKey:@"TotalHaibi"];
     
     //通常点滅
     if(n <= 70 ){
+        
+        if ([[NSUserDefaults standardUserDefaults] boolForKey:@"nomalFlash"] == NO) {
+            
+            [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"nomalFlash"];
+            
+            int i = [[NSUserDefaults standardUserDefaults] integerForKey:@"Complete"] + 10;
+            [[NSUserDefaults standardUserDefaults] setInteger:i forKey:@"Complete"];
+        };
         
         [self sound:@"bonus"];
         
         timer = [NSTimer scheduledTimerWithTimeInterval:0.2 block:^{
             
-            if(on){
+            if(flash){
                 
                 [_haibiImage setImage:[UIImage imageNamed:@"hibi.png"]];
                 
@@ -122,7 +158,7 @@
                 
             }
             
-            on = !on;
+            flash = !flash;
             
         } repeats:YES];
         _awardLabel.text = @"☆　通常点滅";
@@ -130,11 +166,19 @@
     //高速点滅
     } else if (n <= 75) {
         
+        if ([[NSUserDefaults standardUserDefaults] boolForKey:@"speedFlash"] == NO) {
+            
+            [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"speedFlash"];
+            
+            int i = [[NSUserDefaults standardUserDefaults] integerForKey:@"Complete"] + 10;
+            [[NSUserDefaults standardUserDefaults] setInteger:i forKey:@"Complete"];
+        };
+        
         [self sound:@"bonus"];
       
         timer = [NSTimer scheduledTimerWithTimeInterval:0.05 block:^{
             
-            if(on){
+            if(flash){
                 
                 [_haibiImage setImage:[UIImage imageNamed:@"hibi.png"]];
                 
@@ -145,7 +189,7 @@
                 
             }
             
-            on = !on;
+            flash = !flash;
             
         } repeats:YES];
         
@@ -154,11 +198,19 @@
     //スロー点滅
     } else if (n <= 80) {
         
+        if ([[NSUserDefaults standardUserDefaults] boolForKey:@"slowFlash"] == NO) {
+            
+            [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"slowFlash"];
+            
+            int i = [[NSUserDefaults standardUserDefaults] integerForKey:@"Complete"] + 10;
+            [[NSUserDefaults standardUserDefaults] setInteger:i forKey:@"Complete"];
+        };
+        
         [self sound:@"bonus"];
         
-        timer = [NSTimer scheduledTimerWithTimeInterval:0.05 block:^{
+        timer = [NSTimer scheduledTimerWithTimeInterval:1.0 block:^{
             
-            if(on){
+            if(flash){
                 
                 [_haibiImage setImage:[UIImage imageNamed:@"hibi.png"]];
                 
@@ -169,7 +221,7 @@
                 
             }
             
-            on = !on;
+            flash = !flash;
             
         } repeats:YES];
         
@@ -178,11 +230,19 @@
     //花のみ点滅
     } else if (n <= 85) {
         
+        if ([[NSUserDefaults standardUserDefaults] boolForKey:@"flowerFlash"] == NO) {
+            
+            [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"flowerFlash"];
+            
+            int i = [[NSUserDefaults standardUserDefaults] integerForKey:@"Complete"] + 10;
+            [[NSUserDefaults standardUserDefaults] setInteger:i forKey:@"Complete"];
+        };
+        
         [self sound:@"bonus"];
         
         timer = [NSTimer scheduledTimerWithTimeInterval:0.2 block:^{
             
-            if(on){
+            if(flash){
                 
                 [_haibiImage setImage:[UIImage imageNamed:@"hanahibi.png"]];
                 
@@ -193,7 +253,7 @@
                 
             }
             
-            on = !on;
+            flash = !flash;
             
         } repeats:YES];
         
@@ -202,11 +262,20 @@
     //葉っぱのみ
     } else if (n <= 90) {
         
+        if ([[NSUserDefaults standardUserDefaults] boolForKey:@"leafFlash"] == NO) {
+            
+            [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"leafFlash"];
+            
+            int i = [[NSUserDefaults standardUserDefaults] integerForKey:@"Complete"] + 10;
+            [[NSUserDefaults standardUserDefaults] setInteger:i forKey:@"Complete"];
+        };
+        
+        
         [self sound:@"bonus"];
         
         timer = [NSTimer scheduledTimerWithTimeInterval:0.2 block:^{
             
-            if(on){
+            if(flash){
                 
                 [_haibiImage setImage:[UIImage imageNamed:@"happahibi.png"]];
                 
@@ -216,7 +285,7 @@
                 
             }
             
-            on = !on;
+            flash = !flash;
             
         } repeats:YES];
         
@@ -224,6 +293,14 @@
         
     //点灯
     } else if (n <= 92) {
+        
+        if ([[NSUserDefaults standardUserDefaults] boolForKey:@"lightingFlash"] == NO) {
+            
+            [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"lightingFlash"];
+            
+            int i = [[NSUserDefaults standardUserDefaults] integerForKey:@"Complete"] + 10;
+            [[NSUserDefaults standardUserDefaults] setInteger:i forKey:@"Complete"];
+        };
         
         [self sound:@"bonus"];
         
@@ -234,11 +311,19 @@
     //瞬き
     } else if (n <= 94) {
         
+        if ([[NSUserDefaults standardUserDefaults] boolForKey:@"winkFlash"] == NO) {
+            
+            [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"winkFlash"];
+            
+            int i = [[NSUserDefaults standardUserDefaults] integerForKey:@"Complete"] + 10;
+            [[NSUserDefaults standardUserDefaults] setInteger:i forKey:@"Complete"];
+        };
+        
         [self sound:@"bonus"];
         
         timer = [NSTimer scheduledTimerWithTimeInterval:0.1 block:^{
             
-            if(on){
+            if(flash){
                 
                 [_haibiImage setImage:[UIImage imageNamed:@"hibi.png"]];
                 
@@ -249,7 +334,7 @@
                 
             }
             
-            on = !on;
+            flash = !flash;
             
         } repeats:YES];
         
@@ -258,11 +343,19 @@
     //雷
     } else if (n <= 96) {
         
+        if ([[NSUserDefaults standardUserDefaults] boolForKey:@"thumderFlash"] == NO) {
+            
+            [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"thumderFlash"];
+            
+            int i = [[NSUserDefaults standardUserDefaults] integerForKey:@"Complete"] + 10;
+            [[NSUserDefaults standardUserDefaults] setInteger:i forKey:@"Complete"];
+        };
+        
         [self sound:@"thunder"];
         
         timer = [NSTimer scheduledTimerWithTimeInterval:0.2 block:^{
             
-            if(on){
+            if(flash){
                 
                 [_haibiImage setImage:[UIImage imageNamed:@"hibi.png"]];
                 
@@ -272,7 +365,7 @@
                 
             }
             
-            on = !on;
+            flash = !flash;
             
         } repeats:YES];
         
@@ -281,11 +374,19 @@
     //爆発
     } else if (n <= 98) {
         
+        if ([[NSUserDefaults standardUserDefaults] boolForKey:@"bombFlash"] == NO) {
+            
+            [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"bombFlash"];
+            
+            int i = [[NSUserDefaults standardUserDefaults] integerForKey:@"Complete"] + 10;
+            [[NSUserDefaults standardUserDefaults] setInteger:i forKey:@"Complete"];
+        };
+        
         [self sound:@"explosion"];
         
         timer = [NSTimer scheduledTimerWithTimeInterval:0.2 block:^{
             
-            if(on){
+            if(flash){
                 
                 [_haibiImage setImage:[UIImage imageNamed:@"hibi.png"]];
                 
@@ -295,7 +396,7 @@
                 
             }
             
-            on = !on;
+            flash = !flash;
             
         } repeats:YES];
         
@@ -305,11 +406,19 @@
     //津波
     } else {
         
+        if ([[NSUserDefaults standardUserDefaults] boolForKey:@"waveFlash"] == NO) {
+            
+            [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"waveFlash"];
+            
+            int i = [[NSUserDefaults standardUserDefaults] integerForKey:@"Complete"] + 10;
+            [[NSUserDefaults standardUserDefaults] setInteger:i forKey:@"Complete"];
+        };
+        
         [self sound:@"wave"];
         
         timer = [NSTimer scheduledTimerWithTimeInterval:0.2 block:^{
             
-            if(on){
+            if(flash){
                 
                 [_haibiImage setImage:[UIImage imageNamed:@"hibi.png"]];
                 
@@ -319,7 +428,7 @@
                 
             }
             
-            on = !on;
+            flash = !flash;
             
         } repeats:YES];
         
@@ -364,6 +473,19 @@
     }
 }
 
+- (IBAction)pushResult:(id)sender {
+    
+    resultView.hidden = !resultView.hidden;
+    
+    resultView.totalTap.text =
+    [NSString stringWithFormat:@"%d回",[[NSUserDefaults standardUserDefaults] integerForKey:@"TotalCount"]];
+    
+    resultView.totalHaibi.text =
+    [NSString stringWithFormat:@"%d回",[[NSUserDefaults standardUserDefaults] integerForKey:@"TotalHaibi"]];
+    
+    resultView.complete.text =
+    [NSString stringWithFormat:@"%d/100",[[NSUserDefaults standardUserDefaults] integerForKey:@"Complete"]];
+}
 
 
 @end
